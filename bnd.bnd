@@ -1,0 +1,7 @@
+Bundle-Name: calendar-override
+Bundle-SymbolicName: com.liferay.calendar.service.override
+Bundle-Version: 1.0.0
+Fragment-Host: com.liferay.calendar.service;bundle-version="[2.3.0,3.0.0)"
+
+Bundle-ClassPath=/override,.
+
