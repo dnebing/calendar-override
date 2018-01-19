@@ -3,5 +3,29 @@ Bundle-SymbolicName: com.liferay.calendar.service.override
 Bundle-Version: 1.0.0
 Fragment-Host: com.liferay.calendar.service;bundle-version="[2.3.0,3.0.0)"
 
-Bundle-ClassPath=/override,.
+Bundle-ClassPath: /override, .
 
+Export-Package:\
+	com.liferay.calendar.model.impl,\
+	com.liferay.calendar.notification.impl,\
+	com.liferay.calendar.search,\
+	com.liferay.calendar.service.configuration,\
+	com.liferay.calendar.service.permission,\
+	com.liferay.calendar.social,\
+	com.liferay.calendar.upgrade.v1_0_2,\
+	com.liferay.calendar.util,\
+	com.liferay.calendar.workflow
+Import-Package:\
+	!edu.emory.*,\
+	\
+	!groovy.*,\
+	\
+	!net.fortuna.*,\
+	\
+	!org.codehaus.*,\
+	\
+	*
+Liferay-Releng-Module-Group-Description:
+Liferay-Releng-Module-Group-Title: Calendar
+Liferay-Require-SchemaVersion: 1.0.6
+Liferay-Service: true
