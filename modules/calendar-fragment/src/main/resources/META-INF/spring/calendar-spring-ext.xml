@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+>
+	<!-- Replace the Liferay bean definition with our own. -->
+	<bean class="com.liferay.calendar.notification.impl.NotificationSenderFactory" id="com.liferay.calendar.notification.impl.NotificationSenderFactory">
+		<property name="notificationSenders">
+			<map>
+				<entry key="email">
+					<bean class="com.liferay.calendar.notification.impl.CustomEmailNotificationSender" />
+				</entry>
+				<entry key="im">
+					<bean class="com.liferay.calendar.notification.impl.IMNotificationSender" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>

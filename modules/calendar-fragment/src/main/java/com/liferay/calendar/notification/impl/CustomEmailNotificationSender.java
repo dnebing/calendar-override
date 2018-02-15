@@ -27,9 +27,9 @@ import javax.mail.internet.InternetAddress;
 /**
  * @author Eduardo Lundgren
  */
-public class EmailNotificationSender implements NotificationSender {
+public class CustomEmailNotificationSender implements NotificationSender {
 
-	public EmailNotificationSender() {
+	public CustomEmailNotificationSender() {
 		super();
 
 		_log.warn("******************************************************");
@@ -116,5 +116,5 @@ public class EmailNotificationSender implements NotificationSender {
 		}
 	}
 
-	private static final Log _log = LogFactoryUtil.getLog(EmailNotificationSender.class);
+	private static final Log _log = LogFactoryUtil.getLog(CustomEmailNotificationSender.class);
 }
