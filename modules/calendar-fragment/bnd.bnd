@@ -6,8 +6,11 @@ Bundle-Version: 1.0.0
 Fragment-Host: com.liferay.calendar.service;bundle-version="[2.3.0,3.0.0)"
 
 # Make sure the override dir is first in the classpath.
-# The original bundle does not have an entry, so append .
-Bundle-ClassPath: /override, .
+# Additionally you should have the complete bundle classpath for the original bundle.
+# If you don't know what this is, you can use the gogo command "headers <bundleid>"
+# and find the Bundle-Classpath header, that should give you everything you need. If
+# there isn't an entry, append a naked period (.) as the path.
+Bundle-ClassPath: /override,.,lib/backport-util-concurrent-3.1.jar,lib/net.fortuna.ical4j-1.0.jar
 
 # We want to pull in the class from the dependency jar, but we want it to be
 # in the /override subdirectory so it conforms to the classpath override above.
